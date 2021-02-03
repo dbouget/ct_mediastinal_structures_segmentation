@@ -1,0 +1,25 @@
+# use glob syntax.
+syntax: glob
+
+*.nii.gz
+*.nii
+*.elc
+*.pyc
+*~
+.idea/
+*.xml
+os
+numpy
+*.h5
+*.hd5
+*.hdf5
+*.mhd
+*.raw
+/resources
+*.ini
+*.sqlite3
+*.zip
+.bash_history
+/venv
+
+
