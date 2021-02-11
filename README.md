@@ -15,8 +15,8 @@ The following models are provided, all trained on one fold of our 5-fold cross-v
   and a mask with anatomical priors (esophagus, azygos vein, subclavian artieries and brachiocephalic veins).  
   :warning: the mask must be fed manually by the user, a trained model is not provided for this. 
 
-## Citing
-Please cite the following article if you re-use any part of the code, or the trained models:
+## Citing (soon)
+Please cite the following article if you re-use any part of the code, the trained models, or suggested ground truth files:
 >``
 
 ## Stand-alone data and annotation access
@@ -25,8 +25,8 @@ For the NIH dataset, the annotations were performed by a medical trainee under s
 **Benchmark subset:** Fifteen contrast-enhanced CT volumes from St. Olavs University Hospital patients.
 Stations and segmentations for all lymph nodes are provided, in addition to the segmentation for the esophagus,
 azygos vein, subclavian arteries, and brachiocephalic veins.
-Available for direct download [here](url).  
-**NIH dataset**: Stations and refined segmentations for all lymph nodes in 89 patients from the open-source NIH dataset, available [here]().    
+Available for direct download [here](https://drive.google.com/uc?id=1ZsFq7PslqQ5ow_dXB01kDkaKPqYDXD5d).  
+**NIH dataset**: Stations and refined segmentations for all lymph nodes in 89 patients from the open-source NIH dataset, available [here](https://drive.google.com/uc?id=1iVCnZc1GHwtx9scyAXdANqz2HdQArTHn).    
 The CT volumes are available for download on the official [web-page](https://wiki.cancerimagingarchive.net/display/Public/CT+Lymph+Nodes).
 
 ## Installation
@@ -41,7 +41,7 @@ The Python virtual environment can be setup using the following commands:
 ### b. Docker  
 Simply download the corresponding Docker image:  
 
-> `docker pull dbouget/ct_mediastinum_segmentation:v1`
+> `docker pull dbouget/ct_mediastinal_structures_segmentation:v1`
 
 ### c. Models
 In order to download the models locally and prepare the folders, simply run the following:   
@@ -90,14 +90,13 @@ The local resources sub-folder is mapped to the resources sub-folder within the 
 As such, input CT volumes have to be copied inside resources/data to be processed and the output folder
 for the predictions has to be set within the resources sub-folder to be accessible locally.  
 :warning: The docker container does not have gpu support so all inferences are performed on CPU only.
-As such, we recommand using the custom lungs extraction model.  
 
-> `cp /path/to/mri.nii.gz /path/to/ct_mediastinal_structures_segmentation/resources/data/mri-nii.gz`    
-`docker run --entrypoint /bin/bash -v /path/to/ct_mediastinal_structures/resources:/home/ubuntu/resources -t -i dbouget/ct_mediastinal_segmentation:v1`   
-`python3 main.py -i ./resources/data/mri.nii.gz -o ./resources/output_prefix -m AGUNet`  
+> `cp /path/to/ct.nii.gz /path/to/ct_mediastinal_structures_segmentation/resources/data/ct.nii.gz`    
+`docker run --entrypoint /bin/bash -v /path/to/ct_mediastinal_structures/resources:/home/ubuntu/resources -t -i dbouget/ct_mediastinal_structures_segmentation:v1`   
+`python3 main.py -i ./resources/data/ct.nii.gz -o ./resources/output_prefix -m AGUNet`  
 
 
-## <Acknowledgements
+## Acknowledgements
 Parts of the models' architectures were collected from the following repositories:  
 - https://github.com/niecongchong/DANet-keras/  
 - https://github.com/ozan-oktay/Attention-Gated-Networks  
