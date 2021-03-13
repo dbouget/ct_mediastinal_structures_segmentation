@@ -15,9 +15,14 @@ The following models are provided, all trained on one fold of our 5-fold cross-v
   and a mask with anatomical priors (esophagus, azygos vein, subclavian artieries and brachiocephalic veins).  
   :warning: the mask must be fed manually by the user, a trained model is not provided for this. 
 
-## Citing (soon)
+## Citing
 Please cite the following article if you re-use any part of the code, the trained models, or suggested ground truth files:
->``
+>'@article{bouget2021mediastinal,  
+  title={Mediastinal lymph nodes segmentation using 3D convolutional neural network ensembles and anatomical priors guiding},  
+  author={Bouget, David and Pedersen, Andre and Vanel, Johanna and Leira, Haakon O and Langø, Thomas},  
+  journal={arXiv preprint arXiv:2102.06515},  
+  year={2021}  
+}'
 
 ## Stand-alone data and annotation access
 The annotations for the benchmark subset have been proofed by an expert radiologist.
@@ -28,6 +33,18 @@ azygos vein, subclavian arteries, and brachiocephalic veins.
 Available for direct download [here](https://drive.google.com/uc?id=1ZsFq7PslqQ5ow_dXB01kDkaKPqYDXD5d).  
 **NIH dataset**: Stations and refined segmentations for all lymph nodes in 89 patients from the open-source NIH dataset, available [here](https://drive.google.com/uc?id=1iVCnZc1GHwtx9scyAXdANqz2HdQArTHn).    
 The CT volumes are available for download on the official [web-page](https://wiki.cancerimagingarchive.net/display/Public/CT+Lymph+Nodes).
+
+**Mediastinal CT dataset**: The dataset described in our previous article is available for download [here](https://drive.google.com/uc?id=1YqCRcBpsFoE4JsBq5NROqIpeijnITpe1).
+>'@article{bouget2019semantic,  
+  title={Semantic segmentation and detection of mediastinal lymph nodes and anatomical structures in CT data for lung cancer staging},  
+  author={Bouget, David and Jørgensen, Arve and Kiss, Gabriel and Leira, Haakon Olav and Langø, Thomas},  
+  journal={International journal of computer assisted radiology and surgery},  
+  volume={14},  
+  number={6},  
+  pages={977--986},  
+  year={2019},  
+  publisher={Springer}  
+}'
 
 ## Installation
 The following steps have been tested on both Ubuntu and Windows. The details below are for Linux. See the troubleshooting section below for Windows-specific details. 
