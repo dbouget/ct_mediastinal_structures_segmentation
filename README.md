@@ -17,12 +17,20 @@ The following models are provided, all trained on one fold of our 5-fold cross-v
 
 ## Citing
 Please cite the following article if you re-use any part of the code, the trained models, or suggested ground truth files:
->'@article{bouget2021mediastinal,  
-  title={Mediastinal lymph nodes segmentation using 3D convolutional neural network ensembles and anatomical priors guiding},  
-  author={Bouget, David and Pedersen, Andre and Vanel, Johanna and Leira, Haakon O and Langø, Thomas},  
-  journal={arXiv preprint arXiv:2102.06515},  
-  year={2021}  
-}'
+<pre>
+  @article{bouget2021mediastinal,
+  author = {David Bouget and André Pedersen and Johanna Vanel and Haakon O. Leira and Thomas Langø},
+  title = {Mediastinal lymph nodes segmentation using 3D convolutional neural network ensembles and anatomical priors guiding},
+  journal = {Computer Methods in Biomechanics and Biomedical Engineering: Imaging \& Visualization},
+  volume = {0},
+  number = {0},
+  pages = {1-15},
+  year  = {2022},
+  publisher = {Taylor & Francis},
+  doi = {10.1080/21681163.2022.2043778},
+  URL = {https://doi.org/10.1080/21681163.2022.2043778},
+  eprint = {https://doi.org/10.1080/21681163.2022.2043778}}
+</pre>
 
 ## Stand-alone data and annotation access
 The annotations for the benchmark subset have been proofed by an expert radiologist.
@@ -35,7 +43,8 @@ Available for direct download [here](https://drive.google.com/uc?id=1ZsFq7PslqQ5
 The CT volumes are available for download on the official [web-page](https://wiki.cancerimagingarchive.net/display/Public/CT+Lymph+Nodes).
 
 **Mediastinal CT dataset**: The dataset described in our previous article is available for download [here](https://drive.google.com/uc?id=1YqCRcBpsFoE4JsBq5NROqIpeijnITpe1).
->'@article{bouget2019semantic,  
+<pre>
+  @article{bouget2019semantic,  
   title={Semantic segmentation and detection of mediastinal lymph nodes and anatomical structures in CT data for lung cancer staging},  
   author={Bouget, David and Jørgensen, Arve and Kiss, Gabriel and Leira, Haakon Olav and Langø, Thomas},  
   journal={International journal of computer assisted radiology and surgery},  
@@ -43,8 +52,8 @@ The CT volumes are available for download on the official [web-page](https://wik
   number={6},  
   pages={977--986},  
   year={2019},  
-  publisher={Springer}  
-}'
+  publisher={Springer}}
+</pre>
 
 ## Installation
 The following steps have been tested on both Ubuntu and Windows. The details below are for Linux. See the troubleshooting section below for Windows-specific details. 
@@ -120,20 +129,22 @@ Parts of the models' architectures were collected from the following repositorie
 
 For more detailed information about attention mechanisms, please read the corresponding publications:
 
->`@inproceedings{fu2019dual,`  
-  `title={Dual attention network for scene segmentation},`  
-  `author={Fu, Jun and Liu, Jing and Tian, Haijie and Li, Yong and Bao, Yongjun and Fang, Zhiwei and Lu, Hanqing},`    
-  `booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},`  
-  `pages={3146--3154},`  
-  `year={2019}`  
-`}`
+<pre>
+  @inproceedings{fu2019dual,
+  title={Dual attention network for scene segmentation},
+  author={Fu, Jun and Liu, Jing and Tian, Haijie and Li, Yong and Bao, Yongjun and Fang, Zhiwei and Lu, Hanqing},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={3146--3154},
+  year={2019}}
+</pre>
 
->`@article{oktay2018attention,`  
-  `title={Attention u-net: Learning where to look for the pancreas},`  
-  `author={Oktay, Ozan and Schlemper, Jo and Folgoc, Loic Le and Lee, Matthew and Heinrich, Mattias and Misawa, Kazunari and Mori, Kensaku and McDonagh, Steven and Hammerla, Nils Y and Kainz, Bernhard and others},`  
-  `journal={arXiv preprint arXiv:1804.03999},`  
-  `year={2018}`  
-`}`
+<pre>
+  @article{oktay2018attention,
+  title={Attention u-net: Learning where to look for the pancreas},
+  author={Oktay, Ozan and Schlemper, Jo and Folgoc, Loic Le and Lee, Matthew and Heinrich, Mattias and Misawa, Kazunari and Mori, Kensaku and McDonagh, Steven and Hammerla, Nils Y and Kainz, Bernhard and others},
+  journal={arXiv preprint arXiv:1804.03999},
+  year={2018}}
+</pre>
 
 ## Troubleshooting
 On windows, to activate the virtual environment, run:
